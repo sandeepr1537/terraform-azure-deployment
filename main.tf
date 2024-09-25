@@ -1,18 +1,8 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.107"
-    }
-  }
-}
-
 provider "azurerm" {
   features {}
 }
 
-
-resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
-  location = var.location
+resource "azurerm_resource_group" "rg01" {
+  name     = "rg01"
+  location = "Australia East"
 }
