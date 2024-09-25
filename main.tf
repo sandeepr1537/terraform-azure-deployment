@@ -12,12 +12,7 @@ provider "azurerm" {
 }
 
 
-data "azurerm_client_config" "core" {}
-
-# Include the resource group module
-module "resource_group" {
-  source = "./modules/resource_group"
-  resource_group_name = var.resource_group_name
-  location            = var.location
+resource "azurerm_resource_group" "example" {
+  name     = "example"
+  location = var.location
 }
-
