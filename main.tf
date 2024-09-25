@@ -1,6 +1,10 @@
 provider "azurerm" {
   features {}
+
+  # Add subscription ID
+  subscription_id = var.subscription_id
 }
+
 
 # Include the resource group module
 module "resource_group" {
